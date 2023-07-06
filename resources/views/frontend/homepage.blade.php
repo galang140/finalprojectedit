@@ -93,10 +93,10 @@
           <!-- Product actions-->
           <div class="card-footer border-top-0 bg-transparent">
             <div class="text-center">
-              <a class="btn btn-primary mt-auto" href="#">{{ route('detail', $car->slug) }}</a>
+              <a class="btn btn-primary mt-auto" href="#">Sewa</a>
               <a
                 class="btn btn-info mt-auto text-white"
-                href="/detail.html"
+                href="{{ route('detail', $car->slug) }}"
                 >Detail</a
               >
             </div>

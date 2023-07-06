@@ -93,7 +93,7 @@
                 </div>
                     
                 <div class="card-body">
-                    <form action="{{ route('admin.cars.update', $car->id) }}" method="post" enctype="multipart/form-data">
+                    <form action="{{ route('admin.cars.updateImage', $car->id) }}" method="post" enctype="multipart/form-data">
                         @csrf
                         @method('put')
                         <div class="from-group">

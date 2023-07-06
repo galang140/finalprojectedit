@@ -22,13 +22,7 @@
               <a class="nav-link active" aria-current="page" href="{{ route('homepage') }}">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="{{ route('homepage') }}">Type mobil</a>
-            </li>
-            <li class="nav-item">
               <a class="nav-link active" aria-current="page" href="#about">Tentang Kami</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="{{ route('contact') }}">Kontak</a>
             </li>
             <li class="nav-item">
               <a class="nav-link active" aria-current="page" href="">Blog</a>

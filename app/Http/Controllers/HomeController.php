@@ -35,8 +35,8 @@ class HomeController extends Controller
         // ]);
 
     }
-    public function detail()
+    public function detail(Car $car)
     {
-        return view('frontend.detail');
+        return view('frontend.detail', compact('car'));
     }
 }

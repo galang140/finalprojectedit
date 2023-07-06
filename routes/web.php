@@ -27,7 +27,7 @@ Route::post('contact', [\App\Http\Controllers\HomeController::class, 'contactSto
 Route::group(['middleware' => 'is_admin', 'prefix' => 'admin', 'as' => 'admin.'], function() {
     
 });
-Route::get('admin/dashboard', [\App\Http\Controllers\Admin\DashboardController::class, 'index'])->name('dashboard.index')->middleware('is_admin');
+Route::get('admin/dashboard', [\App\Http\Controllers\Admin\DashboardController::class, 'index'])->name('admin.dashboard.index');
 Route::resource('admin/cars', \App\Http\Controllers\Admin\CarController::class);
 Route::put('admin/cars/update=image/{id}',[\App\Http\Controllers\Admin\CarController::class, 'updateImage'])->name('admin.cars.updateImage');
 Route::get('messages', [\App\Http\Controllers\Admin\MessageController::class, 'index'])->name('messages.index');

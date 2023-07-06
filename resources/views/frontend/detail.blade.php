@@ -17,8 +17,8 @@
             <!-- Product image-->
             <img
               class="card-img-top"
-              src=""
-              alt="..."
+              src="{{ Storage::url($car->gambar) }}"
+              alt="{{ $car->nama_mobil }}"
             />
             <!-- Product details-->
             <div class="card-body card-body-custom pt-4">
@@ -26,28 +26,45 @@
                 <!-- Product name-->
                 <h3 class="fw-bolder text-primary">Deskripsi</h3>
                 <p>
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                  Ipsa dolor corrupti porro, sit ex nemo itaque, est
-                  voluptatum illum dignissimos facilis alias facere rem
-                  consequatur?
+                  {{ $car->deskripsi }}
                 </p>
                 <div class="mobil-info-list border-top pt-4">
                   <ul class="list-unstyled">
                     <li>
+                      @if($car->p3k)
                       <i class="ri-checkbox-circle-line"></i>
                       <span>P3K</span>
-                    </li>
-                    <li>
+                      @else
                       <i class="ri-close-circle-line text-secondary"></i>
-                      <span>CHARGER</span>
+                      <span>P3K</span>
+                      @endif
                     </li>
                     <li>
-                      <i class="ri-close-circle-line text-secondary"></i>
-                      <span>AUDIO</span>
+                      @if($car->charger)
+                        <i class="ri-checkbox-circle-line"></i>
+                        <span>CHARGER</span>
+                      @else
+                        <i class="ri-close-circle-line text-secondary"></i>
+                        <span>CHARGER</span>
+                      @endif
                     </li>
                     <li>
-                      <i class="ri-checkbox-circle-line"></i>
-                      <span>AC</span>
+                      @if($car->audio)
+                        <i class="ri-checkbox-circle-line"></i>
+                        <span>AUDIO</span>
+                      @else
+                        <i class="ri-close-circle-line text-secondary"></i>
+                        <span>AUDIO</span>
+                      @endif
+                    </li>
+                    <li>
+                      @if($car->charger)
+                        <i class="ri-checkbox-circle-line"></i>
+                        <span>AC</span>
+                      @else
+                        <i class="ri-close-circle-line text-secondary"></i>
+                        <span>AC</span>
+                      @endif
                     </li>
                   </ul>
                 </div>
@@ -98,10 +115,9 @@
               <div class="text-center">
                 <a
                   class="btn d-flex align-items-center justify-content-center btn-primary mt-auto"
-                  href="#"
+                  href="https://api.whatsapp.com/send/?phone=6285157007994&text&type=phone_number&app_absent=0"
                   style="column-gap: 0.4rem"
-                  >Sewa Mobil <i class="ri-whatsapp-line"></i
-                ></a>
+                  >Sewa Mobil <i class="ri-whatsapp-line"></i></a>
               </div>
             </div>
           </div>

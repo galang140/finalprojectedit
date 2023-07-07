@@ -1,7 +1,7 @@
 <?php
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
-use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
 
 /*
 |--------------------------------------------------------------------------
@@ -32,6 +32,13 @@ Route::resource('admin/cars', \App\Http\Controllers\Admin\CarController::class);
 Route::put('admin/cars/update=image/{id}',[\App\Http\Controllers\Admin\CarController::class, 'updateImage'])->name('admin.cars.updateImage');
 Route::get('messages', [\App\Http\Controllers\Admin\MessageController::class, 'index'])->name('messages.index');
 Route::get('messages/{car}', [\App\Http\Controllers\Admin\MessageController::class, 'destroy'])->name('messages.destroy');
+Route::get('/login',[LoginController::class, 'index'])->middleware('guest');
+// ->name('login')->middleware('guest');
+Route::post('/login',[LoginController::class, 'login']);
+
+Route::get('/register',[RegisterController::class, 'index']);
+Route::post('/register',[RegisterController::class, 'store']);
+
 
 Auth::routes();
 

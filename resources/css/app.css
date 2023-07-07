@@ -1,7 +1,10 @@
-.navbar-transparent {
-    background-color: transparent;
-  }
-  
-  .navbar-transparent.scrolled {
-    background-color: rgba(255, 255, 255, 0.8); /* Ubah nilai alpha (0-1) sesuai kebutuhan */
-  }
+.btn-outline-light {
+  color: #fff; /* Warna teks */
+  background-color: transparent; /* Latar belakang transparan */
+  border-color: #fff; /* Warna garis tepi */
+}
+
+.btn-outline-light:hover {
+  color: #000; /* Warna teks saat dihover */
+  background-color: #fff; /* Latar belakang putih saat dihover */
+}

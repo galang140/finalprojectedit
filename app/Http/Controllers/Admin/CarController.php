@@ -2,13 +2,14 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\Http\Controllers\Controller;
 use App\Models\Car;
+use App\Models\Order;
+use Illuminate\Support\Str;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Validator;
 use App\Http\Requests\Admin\CarStoreRequest;
 use App\Http\Requests\Admin\CarUpdateRequest;
-use Illuminate\Support\Str;
-use Illuminate\Support\Facades\Validator;
 
 class CarController extends Controller
 {
@@ -85,9 +86,9 @@ class CarController extends Controller
         $request->validate([
             'gambar' => 'required|image'
         ]);
-        $car = Car::findDrFail($carId);
+        $car = Car::findOrFail($carId);
         if($request->gambar){
-            unlink('storsge/'.$car->gambar);
+            unlink('storage/'. $car->gambar);
             $gambar = $request->file('gambar')->store('img','public');
 
             $car->update(['gambar' => $gambar]);

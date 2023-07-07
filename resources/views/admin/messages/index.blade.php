@@ -4,7 +4,6 @@
     <div class="card">
         <div class="card-header d-flex justify-content-between align-item-center">
             <h3>daftar pesan</h3>
-            <a href="{{ route('cars.create') }}" class="btn btn-primary">Tambah Data</a>
         </div>
         <div class="card-body">
             <div class="table-responsive">

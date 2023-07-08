@@ -23,8 +23,10 @@ Route::get('/', function () {
 
 Route::get('/', [\App\Http\Controllers\HomeController::class, 'index'])->name('homepage');
 Route::get('/detail/{car:slug}', [\App\Http\Controllers\HomeController::class, 'detail'])->name('detail');
-Route::get('/contact', [\App\Http\Controllers\HomeController::class, 'contact'])->name('contact');
+Route::get('contact', [\App\Http\Controllers\HomeController::class, 'contact'])->name('contact');
 Route::post('contact', [\App\Http\Controllers\HomeController::class, 'contactStore'])->name('contactStore');
+Route::get('about', [\App\Http\Controllers\HomeController::class, 'about'])->name('about');
+Route::get('blog', [\App\Http\Controllers\HomeController::class, 'blog'])->name('blog');
 
 
 Route::group(['middleware' => 'is_admin', 'prefix' => 'admin', 'as' => 'admin.'], function() {

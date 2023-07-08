@@ -22,16 +22,13 @@
               <a class="nav-link active" aria-current="page" href="{{ route('homepage') }}">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="{{ route('homepage') }}">Type mobil</a>
+              <a class="nav-link active" aria-current="page" href="{{ route('about') }}">Tentang Kami</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#about">Tentang Kami</a>
+              <a class="nav-link active" aria-current="page" href="{{ route('contact') }}">Kontak</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Kontak</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="">Blog</a>
+              <a class="nav-link active" aria-current="page" href="{{ route('blog') }}">Blog</a>
             </li>
           </ul>
           <div>
@@ -45,58 +42,6 @@
     <!-- col-md-8 col-md-offset-2 -->
     <!-- header -->
     @yield('content')
-         <!-- about me -->
-         <section id="about">
-          <div class="container">
-            <div class="row ">
-              <center>
-              <div class="col">
-                <h2>About Me</h2>
-                <div class="line dropup-center"></div>
-              </div>
-            </center>
-            </div>
-            <div class="row justify-content-center fs-5 text-center">
-              <div class="col-4 mb-4">
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Praesentium, ipsum?</p>
-              </div>
-              <div class="col-4 mb-4">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit iste incidunt quas asperiores corporis facilis fuga praesentium aperiam voluptatibus voluptate eius eaque itaque, accusamus omnis.</p>
-              </div>
-            </div>
-          </div>
-        </section>
-      <!-- about akhir -->
-      <!-- kontak -->
-      <section id="contact">
-      <div class="container">
-        <div class="row text-center mb-3">
-          <div class="col">
-            <h2>CONTACT ME</h2>
-          </div>
-        </div>
-        <div class="row justify-content-center">
-          <div class="col-md-6">
-            <form>
-              <div class="mb-3">
-                <label for="Name" class="form-label">nama lengkap</label>
-                <input type="text" class="form-control" id="name" aria-describedby="name" />
-              </div>
-              <div class="mb-3">
-                <label for="email" class="form-label">Email</label>
-                <input type="email" class="form-control" id="email" aria-describedby="email" />
-              </div>
-              <div class="mb-3">
-                <label for="pesan" class="form-label">Pesan</label>
-                <textarea class="form-control" id="pesan" rows="3"></textarea>
-              </div>
-              <button type="submit" class="btn btn-primary">Kirim</button>
-            </form>
-          </div>
-        </div>
-      </div>
-     </section>  
-<!-- Remove the container if you want to extend the Footer to full width. -->
 <div class="my-5 mb-0 pb-0">
   <!-- Footer -->
   <footer
@@ -141,7 +86,7 @@
           <!-- Grid column -->
           <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
             <!-- Links -->
-            <h6 class="text-uppercase fw-bold">Useful links</h6>
+            <h6 class="text-uppercase fw-bold">links</h6>
             <hr
                 class="mb-4 mt-0 d-inline-block mx-auto"
                 style="width: 60px; background-color: #000000; height: 2px"

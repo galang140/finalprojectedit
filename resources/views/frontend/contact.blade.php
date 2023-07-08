@@ -35,7 +35,7 @@
         <div class="row justify-content-center">
           <div class="col-lg-10 m-auto">
             <div class="contact-form">
-              <form action="{{ route('contact.store') }}" method="post">
+              <form action="{{ route('contact') }}" method="post">
                 @csrf
                 <div class="row">
                   <div class="col-lg-6 col-md-6 mb-2">

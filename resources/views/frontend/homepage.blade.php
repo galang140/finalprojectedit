@@ -6,15 +6,11 @@
       <div class="carousel-inner">
         <div class="carousel-item active">
           <img src="img/s-1.png" class="d-block w-100" alt="..." />
-          <div class="carousel-caption d-none d-md-block .text-dark">
-            <h5>First slide label</h5>
-          </div>
+          
         </div>
         <div class="carousel-item">
           <img src="img/s-2.png" class="d-block w-100" alt="..." />
-          <div class="carousel-caption d-none d-md-block .text-dark">
-            <h5>First slide label</h5>
-          </div>
+          
         </div>
         <div class="carousel-item">
           <img src="img/s-3.png" class="d-block w-100" alt="..." />
